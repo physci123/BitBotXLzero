@@ -10,6 +10,7 @@ release = "1.0"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",  # Google-style "Args:" / "Returns:" sections
+    "sphinx.ext.viewcode",  # "[source]" link next to each function
 ]
 
 # These only exist on the micro:bit itself, so fake them for the docs build.
@@ -18,6 +19,15 @@ autodoc_member_order = "bysource"
 
 html_theme = "sphinx_rtd_theme"
 html_title = "BitBot XL library"
+
+# "Edit on GitHub" link at the top right of every page
+html_context = {
+    "display_github": True,
+    "github_user": "physci123",
+    "github_repo": "BitBotXLzero",
+    "github_version": "main",
+    "conf_py_path": "/docs/",
+}
 
 exclude_patterns = ["_build"]
 
