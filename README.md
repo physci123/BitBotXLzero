@@ -1,12 +1,12 @@
-# BitBotXLzero
+# BitBotZero
 
 A small MicroPython library for driving the [4tronix BitBot XL](https://4tronix.co.uk/blog/?p=2317)
 robot from a BBC micro:bit. It wraps the motors, LEDs, buzzer and sensors in
 simple functions such as `move_forward()` and `get_distance()`.
 
 This reference is also online at
-[bitbotxlzero.readthedocs.io](https://bitbotxlzero.readthedocs.io/en/latest/),
-and [bitbotXL_cheatsheet.pdf](bitbotXL_cheatsheet.pdf) is a printable summary.
+[bitbotzero.readthedocs.io](https://bitbotzero.readthedocs.io/en/latest/),
+and [bitbot_cheatsheet.pdf](bitbot_cheatsheet.pdf) is a printable summary.
 
 ## Getting started
 

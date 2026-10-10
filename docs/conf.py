@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-project = "bitbotXLzero"
+project = "BitBotZero"
 author = "Michal Hnatek"
 release = "1.0"
 
@@ -24,7 +24,7 @@ html_title = "BitBot XL library"
 html_context = {
     "display_github": True,
     "github_user": "physci123",
-    "github_repo": "BitBotXLzero",
+    "github_repo": "BitBotZero",
     "github_version": "main",
     "conf_py_path": "/docs/",
 }
