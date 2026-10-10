@@ -3,6 +3,10 @@ Function reference
 
 .. currentmodule:: bitbotXL
 
+These are the functions in ``bitbotXL.py``. The BitBot Classic library,
+``bitbotClassic.py``, has exactly the same functions; see :doc:`classic` for
+what is different on that robot.
+
 Movement
 --------
 

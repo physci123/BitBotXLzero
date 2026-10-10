@@ -25,6 +25,20 @@ and [bitbotXL_cheatsheet.pdf](bitbotXL_cheatsheet.pdf) is a printable summary.
    print(bot.get_distance())    # distance to the nearest object in cm
    ```
 
+### Using a BitBot Classic
+
+For the older BitBot Classic, upload [bitbotClassic.py](bitbotClassic.py)
+instead and change the import line:
+
+```python
+import bitbotClassic as bot
+```
+
+It has exactly the same functions, so the rest of your program stays the same.
+One thing is different: the line sensors share their pins with the micro:bit's
+buttons (left sensor with button B, right sensor with button A), so don't use
+the buttons in a program that follows a line.
+
 ## Quick reference
 
 | Function | What it does |

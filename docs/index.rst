@@ -2,12 +2,14 @@ BitBot XL library
 =================
 
 ``bitbotXL.py`` lets you control the 4tronix BitBot XL with simple functions
-from a micro:bit MicroPython program.
+from a micro:bit MicroPython program. For the older BitBot Classic, use
+``bitbotClassic.py`` instead: it has the same functions (see :doc:`classic`).
 
 .. toctree::
    :maxdepth: 2
 
    api
+   classic
 
 Getting started
 ---------------
