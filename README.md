@@ -41,8 +41,10 @@ Speeds are from 0 (stopped) to 100 (full speed). If you give a `duration_ms`,
 the robot moves for that long and then stops; if you leave it out, it keeps
 going until you call `stop()` or another movement function.
 
-See [bitbotXL.md](bitbotXL.md) for the full reference, or
-[bitbotXL_cheatsheet.pdf](bitbotXL_cheatsheet.pdf) for a printable summary.
+The full reference is online at
+[bitbotxlzero.readthedocs.io](https://bitbotxlzero.readthedocs.io/en/latest/).
+It is also in [bitbotXL.md](bitbotXL.md), and
+[bitbotXL_cheatsheet.pdf](bitbotXL_cheatsheet.pdf) is a printable summary.
 
 ## Example
 
