@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-project = "bitbotXL"
+project = "bitbotXLzero"
 author = "Michal Hnatek"
 release = "1.0"
 

@@ -1,4 +1,4 @@
-# bitbotXL library reference
+# bitbotXLzero library reference
 
 `bitbotXL.py` lets you control the 4tronix BitBot XL with simple functions.
 
