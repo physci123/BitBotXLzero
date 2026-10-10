@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function reference &mdash; BitBot XL library</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="BitBot XL library" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            bitbotXL
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Function reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#movement">Movement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.move_forward"><code class="docutils literal notranslate"><span class="pre">move_forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.move_backwards"><code class="docutils literal notranslate"><span class="pre">move_backwards()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.turn_left"><code class="docutils literal notranslate"><span class="pre">turn_left()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.turn_right"><code class="docutils literal notranslate"><span class="pre">turn_right()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.stop"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#leds">LEDs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.led_on"><code class="docutils literal notranslate"><span class="pre">led_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.led_off"><code class="docutils literal notranslate"><span class="pre">led_off()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.leds_on"><code class="docutils literal notranslate"><span class="pre">leds_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.leds_off"><code class="docutils literal notranslate"><span class="pre">leds_off()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#buzzer">Buzzer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.buzzer"><code class="docutils literal notranslate"><span class="pre">buzzer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors">Sensors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.get_distance"><code class="docutils literal notranslate"><span class="pre">get_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.get_left_light"><code class="docutils literal notranslate"><span class="pre">get_left_light()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.get_right_light"><code class="docutils literal notranslate"><span class="pre">get_right_light()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.get_left_line"><code class="docutils literal notranslate"><span class="pre">get_left_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbotXL.get_right_line"><code class="docutils literal notranslate"><span class="pre">get_right_line()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bitbotXL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Function reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-reference">
+<h1>Function reference<a class="headerlink" href="#function-reference" title="Link to this heading"></a></h1>
+<section id="movement">
+<h2>Movement<a class="headerlink" href="#movement" title="Link to this heading"></a></h2>
+<p>Speeds are from 0 (stopped) to 100 (full speed). Give a <code class="docutils literal notranslate"><span class="pre">duration_ms</span></code> and
+the robot stops by itself after that time; leave it out and the robot keeps
+going until you call <a class="reference internal" href="#bitbotXL.stop" title="bitbotXL.stop"><code class="xref py py-func docutils literal notranslate"><span class="pre">stop()</span></code></a>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.move_forward">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">move_forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.move_forward" title="Link to this definition"></a></dt>
+<dd><p>Drive both wheels forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed</strong> – Motor power from 0 (stopped) to 100 (full speed). Very low
+values may not be enough to turn the wheels. Default 50.</p></li>
+<li><p><strong>duration_ms</strong> – How long to drive, in milliseconds. The robot stops
+when the time is up and the function then returns. If None
+(the default) the function returns immediately and the robot
+keeps driving until stop() or another movement is called.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">move_forward</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>  <span class="c1"># forward for 2 seconds, then stop</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.move_backwards">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">move_backwards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.move_backwards" title="Link to this definition"></a></dt>
+<dd><p>Drive both wheels backwards.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed</strong> – Motor power from 0 (stopped) to 100 (full speed). Default 50.</p></li>
+<li><p><strong>duration_ms</strong> – How long to drive, in milliseconds, before stopping.
+If None (the default) the robot keeps reversing until stop()
+or another movement is called.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">move_backwards</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># reverse for half a second</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.turn_left">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">turn_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.turn_left" title="Link to this definition"></a></dt>
+<dd><p>Spin on the spot, anticlockwise (left wheel back, right wheel forward).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed</strong> – Motor power from 0 (stopped) to 100 (full speed). Default 50.</p></li>
+<li><p><strong>duration_ms</strong> – How long to turn, in milliseconds, before stopping.
+If None (the default) the robot keeps turning until stop()
+or another movement is called. The angle turned depends on
+speed, duration and surface, so you will need to experiment.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">turn_left</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>  <span class="c1"># roughly a quarter turn on a smooth floor</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.turn_right">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">turn_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.turn_right" title="Link to this definition"></a></dt>
+<dd><p>Spin on the spot, clockwise (left wheel forward, right wheel back).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed</strong> – Motor power from 0 (stopped) to 100 (full speed). Default 50.</p></li>
+<li><p><strong>duration_ms</strong> – How long to turn, in milliseconds, before stopping.
+If None (the default) the robot keeps turning until stop()
+or another movement is called.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">turn_right</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.stop">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.stop" title="Link to this definition"></a></dt>
+<dd><p>Stop both motors immediately.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">move_forward</span><span class="p">()</span>   <span class="c1"># no duration: keeps going</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">bot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="leds">
+<h2>LEDs<a class="headerlink" href="#leds" title="Link to this heading"></a></h2>
+<p>The BitBot has 12 RGB LEDs numbered 0 to 11: 0-5 on the left arm and 6-11 on
+the right arm. Functions with <code class="docutils literal notranslate"><span class="pre">led</span></code> (singular) control one LED by index;
+functions with <code class="docutils literal notranslate"><span class="pre">leds</span></code> (plural) control all of them.</p>
+<p>Colours are <code class="docutils literal notranslate"><span class="pre">(red,</span> <span class="pre">green,</span> <span class="pre">blue)</span></code> tuples with each value from 0 to 255. These
+are built in: <code class="docutils literal notranslate"><span class="pre">RED</span></code>, <code class="docutils literal notranslate"><span class="pre">GREEN</span></code>, <code class="docutils literal notranslate"><span class="pre">BLUE</span></code>, <code class="docutils literal notranslate"><span class="pre">YELLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">PURPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">WHITE</span></code>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.led_on">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">led_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(40,</span> <span class="pre">40,</span> <span class="pre">40)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.led_on" title="Link to this definition"></a></dt>
+<dd><p>Turn on a single LED, leaving the others unchanged.</p>
+<p>The BitBot has 12 RGB LEDs: 0-5 on the left arm and 6-11 on the right.
+To control all of them at once use leds_on().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>led</strong> – Which LED to light, 0 to 11.</p></li>
+<li><p><strong>colour</strong> – An (r, g, b) tuple, each value from 0 to 255. Use your
+own, e.g. (0, 50, 50), or a built-in: RED, GREEN, BLUE, YELLOW,
+PURPLE, WHITE. Default WHITE. Keep values low (under about
+60) as the LEDs are very bright.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">led_on</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">bot</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>    <span class="c1"># first LED green</span>
+<span class="n">bot</span><span class="o">.</span><span class="n">led_on</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>  <span class="c1"># last LED blue</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.led_off">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">led_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.led_off" title="Link to this definition"></a></dt>
+<dd><p>Turn off a single LED, leaving the others unchanged.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>led</strong> – Which LED to turn off, 0 to 11.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">led_off</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.leds_on">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">leds_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(40,</span> <span class="pre">40,</span> <span class="pre">40)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.leds_on" title="Link to this definition"></a></dt>
+<dd><p>Turn on all 12 LEDs in the same colour.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>colour</strong> – An (r, g, b) tuple, each value from 0 to 255, or a
+built-in colour such as RED. Default WHITE.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">leds_on</span><span class="p">(</span><span class="n">bot</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span>      <span class="c1"># all LEDs red</span>
+<span class="n">bot</span><span class="o">.</span><span class="n">leds_on</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>  <span class="c1"># all LEDs a custom colour</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.leds_off">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">leds_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.leds_off" title="Link to this definition"></a></dt>
+<dd><p>Turn off all 12 LEDs.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">leds_off</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="buzzer">
+<h2>Buzzer<a class="headerlink" href="#buzzer" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.buzzer">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">buzzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.buzzer" title="Link to this definition"></a></dt>
+<dd><p>Sound the buzzer at its fixed tone (about 2.4kHz).</p>
+<p>The buzzer is a simple on/off type, so the pitch cannot be changed.
+The function waits until the beep has finished.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>duration_ms</strong> – Length of the beep in milliseconds. Default 200.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">buzzer</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>  <span class="c1"># half-second beep</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.get_distance">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">get_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_us</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.get_distance" title="Link to this definition"></a></dt>
+<dd><p>Measure the distance to the nearest object with the ultrasonic sensor.</p>
+<p>Works best on hard, flat surfaces facing the sensor. Soft or angled
+objects may not reflect the sound back. Readings take up to about
+30 ms, so don’t call it more often than every 50 ms or so.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_us</strong> – How long to wait for the echo, in microseconds, before
+giving up. The default (30000) corresponds to about 5 m.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The distance in centimetres as a whole number, or -1 if no echo
+was received (nothing in range, or the object reflected no sound).</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_distance</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>   <span class="c1"># something is closer than 15 cm</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.get_left_light">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">get_left_light</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.get_left_light" title="Link to this definition"></a></dt>
+<dd><p>Read the left light sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A number from 0 (dark) to 1023 (very bright). Readings depend on
+the room lighting, so measure your own thresholds.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_left_light</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_right_light</span><span class="p">():</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">turn_left</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>   <span class="c1"># turn towards the light</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.get_right_light">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">get_right_light</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.get_right_light" title="Link to this definition"></a></dt>
+<dd><p>Read the right light sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A number from 0 (dark) to 1023 (very bright).</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bot</span><span class="o">.</span><span class="n">get_right_light</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.get_left_line">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">get_left_line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.get_left_line" title="Link to this definition"></a></dt>
+<dd><p>Read the left line-following sensor (underneath the robot).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1 means “over the line”
+0 means “not over the line” or that something went wrong</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on_line</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_left_line</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bitbotXL.get_right_line">
+<span class="sig-prename descclassname"><span class="pre">bitbotXL.</span></span><span class="sig-name descname"><span class="pre">get_right_line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitbotXL.get_right_line" title="Link to this definition"></a></dt>
+<dd><p>Read the right line-following sensor (underneath the robot).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1 means “over the line”
+0 means “not over the line” or that something went wrong</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on_line</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_right_line</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="BitBot XL library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
